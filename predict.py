@@ -6,10 +6,8 @@ import argparse
 
 parser = argparse.ArgumentParser('Arguments for the predict.py file')
 
-parser.add_argument('-chpath', type=str, default='/home/workspace/ImageClassifier/checkpoint.pth', 
-                    help="Input your or another checkpoint filepath - model checkpoint. Enclose in ''. DEFAULT IS '/home/workspace/ImageClassifier/checkpoint.pth'")
-parser.add_argument('-impath', type=str, default='/home/workspace/ImageClassifier/flowers/test/21/image_06805.jpg', 
-                    help="Input filepath for image - image to be classified. Enclose in ''. DEFAULT IS '/home/workspace/ImageClassifier/flowers/test/21/image_06805.jpg'")
+parser.add_argument('impath', type=str, help="Input filepath for image BEFORE chpath - andatory image to be classified. Do not precede with impath")
+parser.add_argument('chpath', type=str, help="Input your or another checkpoint filepath AFTER impath - mandatory model checkpoint. Do not precede with chpath")
 parser.add_argument('-gpu', action='store_true', 
                     help='No input. Attempts to use GPU to train if readily available. DEFAULT IS False')
 parser.add_argument('-topk', type=int, default=5, 
