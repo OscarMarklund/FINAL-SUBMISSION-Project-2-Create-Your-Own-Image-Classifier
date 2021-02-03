@@ -21,6 +21,9 @@ Significant referencing from these sources were used:
 Changelog:
 - train.py line 9, 29 and 41 introduce the d_dir or data_directory argument
 - train.py lines 22-26 introduce the quit() response to unsuitable model architecture requests from user
-- train_function.py line 5 and 24 changed to accommodate the new argument d_dir
-- train_function.py lines 38-42 altered so that validation images are not skewed etc. but are presented exactly like the test iamges.
+- train_function.py line 20 and 24 changed to accommodate the new argument d_dir
+- train_function.py lines 38-42 altered so that validation images are not skewed etc. but are presented exactly like the test images.
+- train_function.py line 189 now prints Accuracy: etc. instead of Val accuracy:
 - Image Classifier Project.html altered exactly the same way as the above alteration.
+- Imports are now at the beginning of both the train_function.py and predict_function.py codes as opposed to within the function itself.
+- predict.py lines 9 and 10 now present chpath and impath as mandatory arguments with updated helplines.
