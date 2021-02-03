@@ -186,7 +186,7 @@ def trainandsave(d_dir, model_architecture, hidden_layer_1_units, hidden_layer_2
             equality = top_class == labels.view(*top_class.shape)
             accuracy += torch.mean(equality.type(torch.FloatTensor)).item()
 
-    print(f"Val accuracy: {accuracy/len(dataloaders['test']):.3f}")    
+    print(f"Accuracy: {accuracy/len(dataloaders['test']):.3f}")    
            
     # Confirming classifier numbers with the model set
     model.class_to_idx = image_datasets['train'].class_to_idx
