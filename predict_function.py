@@ -2,23 +2,24 @@
 # Submission date: 03-Feb-2021
 # Last altered: 03-Feb-2021
 
+#Imports
+import numpy as np
+import torch.nn.functional as F
+
+import argparse
+import json
+import time
+import torch
+from torch import nn, optim
+from torchvision import datasets, transforms, models
+import os
+from collections import OrderedDict
+import PIL
+from PIL import Image
+    
 def loadandpredict(ch_path, image_path, topk, cat_names, gpu):
     # Receives user input with defaults in case to load a trained model architecture on images of flowers, pitch an image to it to be classified and return results
-    
-    #Imports
-    import numpy as np
-    import torch.nn.functional as F
 
-    import argparse
-    import json
-    import time
-    import torch
-    from torch import nn, optim
-    from torchvision import datasets, transforms, models
-    import os
-    from collections import OrderedDict
-    import PIL
-    from PIL import Image
 
     # GPU or CPU is made the device of choice
     # USER INPUT TURNS GPU ON OR OFF
