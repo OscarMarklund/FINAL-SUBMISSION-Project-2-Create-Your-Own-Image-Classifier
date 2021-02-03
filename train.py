@@ -6,7 +6,7 @@ import argparse
 
 parser = argparse.ArgumentParser('Arguments for the test.py file')
 
-parser.add_argument('-d_dir', type=str, default='/home/workspace/ImageClassifier/flowers', help="Input path for image folder - image folder path. Enclose in ''. DEFAULT IS '/home/workspace/ImageClassifier/flowers'")
+parser.add_argument('d_dir', type=str, help="mandatory Input path for image folder. Do not precede path with d_dir.")
 parser.add_argument('-arch', type=str, default='vgg16', help="Input either 'vgg11', 'vgg13', 'vgg16' or 'vgg19'; no other models are supported - Model architecture of choice. Enclose in ''. DEFAULT IS 'vgg16'")
 parser.add_argument('-hul1', type=int, default=5000, help='Input an integer - Number of units in the first hidden layer. Suggested 20000>x>500. DEFAULT IS 5000')
 parser.add_argument('-hul2', type=int, default=1000, help='Input an integer - Number of units in the second hidden layer. Suggested 5000>x>200 or smaller than layer 1. DEFAULT IS 1000')
