@@ -2,23 +2,23 @@
 # Resubmission date: 04-Feb-2021
 # Last altered: 04-Feb-2021
 
+#Imports are here
+import numpy as np
+import torch.nn.functional as F
+
+import argparse
+import json
+import time
+import torch
+from torch import nn, optim
+from torchvision import datasets, transforms, models
+import os
+from collections import OrderedDict
+import PIL
+from PIL import Image
+
 def trainandsave(d_dir, model_architecture, hidden_layer_1_units, hidden_layer_2_units, learning_rate, gpu, n_epochs, save_directory):
     # Receives user input with defaults in case to train a suitable model architecture on images of flowers within the folder 'flowers.'
-
-    # Imports are here
-    import numpy as np
-    import torch.nn.functional as F
-
-    import argparse
-    import json
-    import time
-    import torch
-    from torch import nn, optim
-    from torchvision import datasets, transforms, models
-    import os
-    from collections import OrderedDict
-    import PIL
-    from PIL import Image
 
     # Defines the paths for image folders
     data_dir = d_dir
